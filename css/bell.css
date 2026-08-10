@@ -1,0 +1,845 @@
+
+/* =====================================================
+   TEMA — MAKEUP BELL
+   TEMA ESCURO • ROSA FRIO • ROSE • VINHO
+===================================================== */
+
+/* =====================================================
+   FUNDO GERAL
+===================================================== */
+
+body:has(.projeto_bell) {
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(201, 143, 159, 0.08),
+            transparent 35%
+        ),
+        var(--bell-bg-primary);
+
+    color: var(--bell-text-secondary);
+}
+
+/* =====================================================
+   MENU
+===================================================== */
+
+body:has(.projeto_bell) .menu {
+    background: rgba(10, 8, 10, 0.88);
+
+    border-bottom:
+        1px solid var(--bell-border);
+
+    box-shadow:
+        0 5px 25px rgba(201, 143, 159, 0.08);
+}
+
+body:has(.projeto_bell) .menu a {
+    color: var(--bell-text-secondary);
+}
+
+body:has(.projeto_bell) .menu a:hover {
+    color: var(--bell-secondary-light);
+}
+
+body:has(.projeto_bell) .menu a.active {
+    color: var(--bell-primary);
+}
+
+body:has(.projeto_bell) .menu a::after {
+    background: var(--gradient-button-bell);
+}
+
+/* =====================================================
+   TÍTULOS
+===================================================== */
+
+.projeto_bell h1 {
+    background: var(--gradient-h1-bell);
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    display: inline-block;
+}
+
+.projeto_bell h2,
+.projeto_bell .descricao {
+    background: var(--gradient-text-bell);
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    display: inline-block;
+}
+
+/* =====================================================
+   TEXTOS
+===================================================== */
+
+.projeto_bell .text-descricao,
+.projeto_bell .sobre-conteudo p {
+    color: var(--bell-text-secondary);
+}
+
+.projeto_bell h3,
+.projeto_bell .card-tech p {
+    color: var(--bell-text-primary);
+}
+
+.projeto_bell {
+    color: var(--bell-text-secondary);
+}
+
+.projeto_bell .apresentacao {
+    color: var(--bell-text-secondary);
+}
+
+/* =====================================================
+   BOTÕES
+===================================================== */
+
+.projeto_bell .btn {
+    background: var(--gradient-button-bell);
+
+    box-shadow:
+        0 5px 20px rgba(201, 143, 159, 0.18);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.projeto_bell .btn a {
+    color: #ffffff;
+}
+
+.projeto_bell .btn:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 30px rgba(201, 143, 159, 0.28);
+}
+
+/* =====================================================
+   BOTÕES SECUNDÁRIOS
+===================================================== */
+
+.projeto_bell .btn:nth-child(2),
+.projeto_bell .btn:nth-child(3) {
+    background: transparent;
+
+    border:
+        1px solid var(--bell-primary);
+}
+
+.projeto_bell .btn:nth-child(2) a,
+.projeto_bell .btn:nth-child(3) a {
+    color: var(--bell-secondary-light);
+}
+
+.projeto_bell .btn:nth-child(2):hover,
+.projeto_bell .btn:nth-child(3):hover {
+    background:
+        rgba(201, 143, 159, 0.10);
+
+    border-color:
+        var(--bell-accent-rose);
+
+    box-shadow:
+        var(--bell-shadow);
+}
+
+/* =====================================================
+   IMAGEM DO PROJETO
+===================================================== */
+
+.projeto_bell .imagem-realmify {
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    min-height: 400px;
+
+    border-radius: 30px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(201, 143, 159, 0.16),
+            rgba(169, 111, 128, 0.08),
+            transparent 75%
+        );
+
+    overflow: hidden;
+}
+
+.projeto_bell .imagem-realmify img {
+    max-width: 100%;
+    width: 400px;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            0 15px 30px
+            rgba(201, 143, 159, 0.22)
+        );
+}
+
+/* =====================================================
+   SOBRE
+===================================================== */
+
+.projeto_bell .sobre {
+    background:
+        rgba(18, 14, 18, 0.82);
+
+    border:
+        1px solid var(--bell-border);
+
+    box-shadow:
+        0 0 30px rgba(201, 143, 159, 0.10),
+        0 0 60px rgba(169, 111, 128, 0.06);
+}
+
+.projeto_bell .sobre:hover {
+    border-color:
+        var(--bell-border-hover);
+
+    box-shadow:
+        0 0 35px rgba(201, 143, 159, 0.16),
+        0 0 70px rgba(169, 111, 128, 0.10);
+}
+
+/* =====================================================
+   EFEITOS DE LUZ — SOBRE
+===================================================== */
+
+.projeto_bell .sobre::before {
+    background:
+        radial-gradient(
+            circle,
+            rgba(201, 143, 159, 0.16),
+            transparent 70%
+        );
+}
+
+.projeto_bell .sobre::after {
+    background:
+        radial-gradient(
+            circle,
+            rgba(169, 111, 128, 0.12),
+            transparent 70%
+        );
+}
+
+/* =====================================================
+   TÍTULOS DAS SEÇÕES
+===================================================== */
+
+.projeto_bell .titulo-secao i {
+    color: var(--bell-accent-rose);
+
+    text-shadow:
+        0 0 15px
+        rgba(201, 143, 159, 0.45);
+}
+
+/* =====================================================
+   CARDS DE TECNOLOGIA
+===================================================== */
+
+.projeto_bell .card-tech {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(201, 143, 159, 0.10),
+            rgba(169, 111, 128, 0.06)
+        );
+
+    border:
+        1px solid var(--bell-border);
+}
+
+.projeto_bell .card-tech:hover {
+    border-color:
+        var(--bell-border-hover);
+
+    box-shadow:
+        var(--bell-shadow);
+}
+
+.projeto_bell .card-tech i {
+    color: var(--bell-accent-rose);
+}
+
+.projeto_bell .card-tech:hover i {
+    color: var(--bell-secondary-light);
+}
+
+/* =====================================================
+   DESTAQUES
+===================================================== */
+
+.projeto_bell .destaques {
+    background:
+        rgba(18, 14, 18, 0.82);
+
+    border:
+        1px solid var(--bell-border);
+
+    box-shadow:
+        0 0 30px rgba(201, 143, 159, 0.10),
+        0 0 60px rgba(169, 111, 128, 0.07);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+/* =====================================================
+   EFEITOS DE LUZ — DESTAQUES
+===================================================== */
+
+.projeto_bell .destaques::before {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    top: -120px;
+    right: -120px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(201, 143, 159, 0.14),
+            transparent 70%
+        );
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.projeto_bell .destaques::after {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    bottom: -120px;
+    left: -120px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(169, 111, 128, 0.10),
+            transparent 70%
+        );
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+/* =====================================================
+   TÍTULO DOS DESTAQUES
+===================================================== */
+
+.projeto_bell .destaques .titulo-secao {
+    position: relative;
+    z-index: 2;
+}
+
+.projeto_bell .destaques .titulo-secao i {
+    color: var(--bell-accent-rose);
+
+    text-shadow:
+        0 0 15px rgba(201, 143, 159, 0.55);
+}
+
+/* =====================================================
+   LISTA DE FUNCIONALIDADES
+===================================================== */
+
+.projeto_bell .destaques .informacoes {
+    position: relative;
+    z-index: 2;
+}
+
+.projeto_bell .destaques .informacoes ul {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+}
+
+.projeto_bell .destaques .informacoes li {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(201, 143, 159, 0.09),
+            rgba(169, 111, 128, 0.05)
+        );
+
+    border:
+        1px solid var(--bell-border);
+
+    color:
+        var(--bell-text-secondary);
+
+    border-radius: 15px;
+
+    transition: 0.3s ease;
+}
+
+.projeto_bell .destaques .informacoes li:hover {
+    transform: translateY(-4px);
+
+    border-color:
+        var(--bell-border-hover);
+
+    box-shadow:
+        0 0 20px rgba(201, 143, 159, 0.16);
+}
+
+.projeto_bell .destaques .informacoes li i {
+    color:
+        var(--bell-accent-rose);
+}
+
+.projeto_bell .informacoes {
+    color:
+        var(--bell-text-primary);
+}
+
+.projeto_bell .informacoes li {
+    color:
+        var(--bell-text-secondary);
+}
+
+.projeto_bell .informacoes li i {
+    color:
+        var(--bell-accent-rose);
+}
+
+/* =====================================================
+   CARDS DE PROJETO
+===================================================== */
+
+.projeto_bell .projetos-cards {
+    background:
+        var(--gradient-card-bell);
+
+    border:
+        1px solid var(--bell-border);
+
+    box-shadow:
+        0 0 20px rgba(201, 143, 159, 0.10);
+}
+
+.projeto_bell .projetos-cards:hover {
+    border-color:
+        var(--bell-border-hover);
+
+    box-shadow:
+        0 0 30px rgba(201, 143, 159, 0.18);
+}
+
+.projeto_bell .projetos-cards p {
+    color:
+        var(--bell-text-secondary);
+}
+
+.projeto_bell .projetos-cards button {
+    background:
+        var(--gradient-button-bell);
+}
+
+.projeto_bell .projetos-cards button:hover {
+    box-shadow:
+        var(--bell-shadow);
+}
+
+/* =====================================================
+   GALERIA DE IMAGENS
+===================================================== */
+
+.projeto_bell .imagens {
+    width: min(1200px, 90%);
+
+    margin: 120px auto;
+
+    padding: 50px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    background:
+        rgba(18, 14, 18, 0.82);
+
+    border:
+        1px solid var(--bell-border);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 0 30px rgba(201, 143, 159, 0.10),
+        0 0 60px rgba(169, 111, 128, 0.07);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+/* =====================================================
+   EFEITOS DE LUZ — GALERIA
+===================================================== */
+
+.projeto_bell .imagens::before {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    top: -120px;
+    right: -120px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(201, 143, 159, 0.14),
+            transparent 70%
+        );
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.projeto_bell .imagens::after {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    bottom: -120px;
+    left: -120px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(169, 111, 128, 0.10),
+            transparent 70%
+        );
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+/* =====================================================
+   GALERIA
+===================================================== */
+
+.projeto_bell .galeria-bell {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+/* =====================================================
+   CARD DA IMAGEM
+===================================================== */
+
+.projeto_bell .imagem-card {
+    padding: 15px;
+
+    background:
+        var(--gradient-card-bell);
+
+    border:
+        1px solid var(--bell-border);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 0 20px rgba(201, 143, 159, 0.08);
+
+    overflow: hidden;
+
+    transition: 0.35s ease;
+}
+
+.projeto_bell .imagem-card:hover {
+    transform: translateY(-6px);
+
+    border-color:
+        var(--bell-border-hover);
+
+    box-shadow:
+        var(--bell-shadow);
+}
+
+.projeto_bell .imagem-card img {
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+
+    border-radius: 12px;
+
+    object-fit: cover;
+}
+
+/* =====================================================
+   RESPONSIVIDADE — GALERIA
+===================================================== */
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .projeto_bell .imagens {
+        width: 95%;
+
+        padding: 30px 20px;
+
+        margin: 80px auto;
+    }
+
+    .projeto_bell .imagens .titulo-secao h2 {
+        font-size: 2rem;
+    }
+
+    .projeto_bell .galeria-bell {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .projeto_bell .imagem-card {
+        min-height: 220px;
+    }
+}
+
+
+/* =====================================================
+   CELULAR PEQUENO
+===================================================== */
+
+@media (max-width: 480px) {
+
+    
+    .menu_bell {
+        height: auto;
+
+        padding: 20px;
+    }
+
+    .ico-retorno {
+        width: auto;
+
+        margin-right: 20px;
+    }
+
+    .menu_bell ul {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px 25px;
+    }
+
+    .menu_bell a {
+        font-size: .85rem;
+    }
+
+
+    .projeto_bell {
+        width: 95%;
+
+        margin-top: 120px;
+    }
+
+    .projeto_bell h1 {
+        font-size: 2.5rem;
+    }
+
+    .projeto_bell .descricao {
+        font-size: 1.2rem;
+    }
+
+    .projeto_bell .card-tecnologia {
+        grid-template-columns: 1fr;
+    }
+
+    .imagem-bell img {
+        width: 220px;
+    }
+
+    .projeto_bell .buttons {
+        width: 100%;
+
+        flex-direction: column;
+    }
+
+    .projeto_bell .btn {
+        width: 100%;
+    }
+
+    .destaques {
+        width: 95%;
+
+        padding: 30px 20px;
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE — TABLET
+===================================================== */
+
+@media (max-width: 1024px) {
+
+    .projeto_bell .apresentacao {
+        align-items: center;
+
+        text-align: center;
+    }
+
+    .projeto_bell .imagem-realmify {
+        width: 100%;
+
+        min-height: 320px;
+    }
+
+    .projeto_bell .imagem-realmify img {
+        width: 320px;
+    }
+
+    .projeto_bell .card-tech {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projeto_bell .destaques .informacoes ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE — CELULAR
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .projeto_bell {
+        width: 95%;
+
+        margin-top: 120px;
+    }
+
+    .projeto_bell h1 {
+        font-size: 2.5rem;
+    }
+
+    .projeto_bell .descricao {
+        font-size: 1.2rem;
+    }
+
+    .projeto_bell .card-tech {
+        grid-template-columns: 1fr;
+    }
+
+    .projeto_bell .imagem-realmify img {
+        width: 220px;
+    }
+
+    .projeto_bell .buttons {
+        width: 100%;
+
+        flex-direction: column;
+    }
+
+    .projeto_bell .btn {
+        width: 100%;
+    }
+
+    .projeto_bell .destaques {
+        width: 95%;
+
+        padding: 30px 20px;
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE — CELULAR PEQUENO
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .projeto_bell h1 {
+        font-size: 2.2rem;
+    }
+
+    .projeto_bell .descricao {
+        font-size: 1rem;
+    }
+
+    .projeto_bell .text-descricao {
+        font-size: .9rem;
+    }
+
+    .projeto_bell .imagem-realmify img {
+        width: 160px;
+    }
+
+    .projeto_bell .destaques .titulo-secao h2 {
+        font-size: 1.7rem;
+    }
+}
+

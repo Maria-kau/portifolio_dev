@@ -1,0 +1,1091 @@
+/* =====================================================
+   MENU REALMIFY
+===================================================== */
+
+.menu_realmify,
+.menu_bell {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 20px;
+
+    background: rgba(5, 5, 5, 0.80);
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(139, 92, 246, 0.15);
+
+    z-index: 1000;
+}
+
+
+/* =====================================================
+   ÍCONE DE RETORNO
+===================================================== */
+
+.ico-retorno {
+    width: 40%;
+}
+
+.ico-retorno a {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+
+    border-radius: 50%;
+
+    background-color: rgba(34, 5, 82, 0.696);
+
+    color: var(--text-primary);
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.ico-retorno a:hover {
+    background-color: rgba(139, 92, 246, 0.35);
+
+    transform: translateX(-3px);
+
+    box-shadow:
+        0 0 15px rgba(139, 92, 246, 0.35);
+}
+
+
+/* =====================================================
+   LISTA DO MENU
+===================================================== */
+
+.menu_realmify ul,
+.menu_bell ul {
+    display: flex;
+
+    align-items: center;
+
+    gap: 40px;
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =====================================================
+   LINKS DO MENU
+===================================================== */
+
+.menu_realmify ul a,
+.menu_bell ul a {
+    position: relative;
+
+    color: var(--text-secondary);
+
+    text-decoration: none;
+
+    font-size: 1rem;
+
+    font-weight: 500;
+
+    transition: 0.3s ease;
+}
+
+.menu_realmify ul a:hover,
+.menu_bell ul a:hover {
+    color: var(--text-primary);
+}
+
+
+/* =====================================================
+   LINHA ANIMADA
+   SOMENTE NOS LINKS DO MENU
+
+   NÃO APLICA AO .ico-retorno
+===================================================== */
+
+.menu_realmify ul li:not(.ico-retorno) a::after,
+.menu_bell ul li:not(.ico-retorno) a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--gradient-button);
+
+    border-radius: 10px;
+
+    transform: translateX(-50%);
+
+    transition: width 0.3s ease;
+}
+
+.menu_realmify ul li:not(.ico-retorno) a:hover::after,
+.menu_bell ul li:not(.ico-retorno) a:hover::after {
+    width: 100%;
+}
+
+.projeto_realmify,
+.menu_bell,
+.sobre,
+.destaques,
+.imagens {
+    scroll-margin-top: 100px;
+}
+
+/* =====================================================
+   PÁGINA DO PROJETO — REALMIFY
+===================================================== */
+
+.projeto_realmify,
+.projeto_bell {
+    width: min(1100px, 90%);
+
+    min-height: calc(70vh - 90px);
+
+    margin: 80px auto 0;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+/* =====================================================
+   INFORMAÇÕES DO PROJETO
+===================================================== */
+
+.info_projeto {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+
+    gap: 50px;
+}
+
+
+/* =====================================================
+   APRESENTAÇÃO
+===================================================== */
+
+.projeto_realmify .apresentacao,
+.projeto_bell .apresentacao {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 18px;
+}
+
+.projeto_realmify h1,
+.projeto_bell h1 {
+    font-size: clamp(2.2rem, 6vw, 3.6rem);
+
+    line-height: 1.05;
+}
+
+.projeto_realmify .descricao,
+.projeto_bell .descricao {
+
+    font-weight: 600;
+}
+
+.projeto_realmify .text-descricao,
+.projeto_bell .text-descricao {
+    max-width: 600px;
+
+    line-height: 1.8;
+
+    color: var(--text-secondary);
+}
+
+/* =====================================================
+   TECNOLOGIAS DO REALMIFY
+===================================================== */
+
+.projeto_realmify .card-tecnologia,
+.projeto_bell .card-tecnologia {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 8px;
+}
+
+.projeto_realmify .card-tech,
+.projeto_bell .card-tech {
+    width: 100%;
+
+    min-height: 60px;
+
+    margin-top: 10px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 10px;
+
+    background:
+        linear-gradient(145deg,
+            rgba(139, 92, 246, .12),
+            rgba(37, 99, 235, .08));
+
+    border-radius: 12px;
+
+    border: 1px solid rgba(139, 92, 246, .15);
+
+    transition: .3s ease;
+}
+
+.projeto_realmify .card-tech:hover,
+.projeto_bell .card-tech:hover {
+    transform: translateY(-3px);
+
+    border-color: var(--secondary-light);
+
+    box-shadow:
+        0 0 15px rgba(56, 189, 248, .20);
+}
+
+.projeto_realmify .card-tech i,
+.projeto_bell .card-tech i {
+    font-size: 1.5rem;
+
+    color: var(--primary);
+
+    width: auto;
+}
+
+.projeto_realmify .card-tech p,
+.projeto_bell .card-tech p {
+    color: var(--text-primary);
+
+    font-weight: 500;
+
+    font-size: .75rem;
+}
+
+
+/* =====================================================
+   IMAGEM DO REALMIFY
+===================================================== */
+
+.imagem-realmify {
+    flex: 1;
+
+    min-height: 420px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 20px;
+
+    background:
+        radial-gradient(circle,
+            rgba(139, 92, 246, .12),
+            rgba(37, 99, 235, .06),
+            transparent 75%);
+}
+
+.imagem-realmify img {
+    width: 100%;
+
+    border-radius: 14px;
+
+}
+
+
+/* =====================================================
+   BOTÕES DO REALMIFY
+===================================================== */
+
+.projeto_realmify .buttons {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 18px;
+
+    margin-top: 25px;
+
+    flex-wrap: wrap;
+}
+
+.projeto_realmify .btn {
+    min-width: 170px;
+
+    height: 50px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 12px;
+
+    background: var(--gradient-button);
+
+    transition: .3s ease;
+
+    cursor: pointer;
+}
+
+.projeto_realmify .btn a {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+
+    text-decoration: none;
+
+    color: var(--text-primary);
+
+    font-weight: 600;
+}
+
+.projeto_realmify .btn:hover {
+    transform: translateY(-5px);
+
+    box-shadow: var(--shadow-purple);
+}
+
+.projeto_realmify .btn:nth-child(2),
+.projeto_realmify .btn:nth-child(3) {
+    background: transparent;
+
+    border: 1px solid var(--primary);
+}
+
+.projeto_realmify .btn:nth-child(2):hover,
+.projeto_realmify .btn:nth-child(3):hover {
+    background: rgba(139, 92, 246, .12);
+
+    border-color: var(--secondary-light);
+}
+
+
+/* =====================================================
+   DESTAQUES DO REALMIFY
+===================================================== */
+
+.destaques {
+    width: min(1100px, 90%);
+
+    margin: 100px auto;
+
+    padding: 50px;
+
+    background:
+        rgba(18, 18, 29, .75);
+
+    backdrop-filter: blur(12px);
+
+    border:
+        1px solid rgba(139, 92, 246, .25);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 0 30px rgba(139, 92, 246, .18),
+        0 0 60px rgba(37, 99, 235, .12);
+}
+
+
+/* =====================================================
+   TÍTULO DOS DESTAQUES
+===================================================== */
+
+.destaques .titulo-secao {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 35px;
+}
+
+.destaques .titulo-secao i {
+    font-size: 2rem;
+
+    color: var(--primary);
+
+    text-shadow:
+        0 0 15px rgba(139, 92, 246, .7);
+}
+
+.destaques .titulo-secao h2 {
+    font-size: 2.3rem;
+}
+
+
+/* =====================================================
+   LISTA DE FUNCIONALIDADES
+===================================================== */
+
+.destaques .informacoes ul {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px 30px;
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+}
+
+.destaques .informacoes li {
+    padding: 15px 18px;
+
+    background:
+        linear-gradient(145deg,
+            rgba(139, 92, 246, .12),
+            rgba(37, 99, 235, .08));
+
+    border:
+        1px solid rgba(139, 92, 246, .15);
+
+    border-radius: 12px;
+
+    color: var(--text-secondary);
+
+    transition: .3s ease;
+}
+
+.destaques .informacoes li:hover {
+    transform: translateX(5px);
+
+    border-color: var(--secondary-light);
+
+    box-shadow:
+        0 0 15px rgba(56, 189, 248, .18);
+}
+
+.destaques .informacoes li i {
+    color: var(--secondary-light);
+
+    font-style: normal;
+
+    font-size: .95rem;
+}
+
+
+/* =====================================================
+   IMAGENS DO REALMIFY
+===================================================== */
+
+.imagens {
+    width: min(1100px, 90%);
+
+    margin: 100px auto;
+
+    padding: 50px;
+
+    background: rgba(18, 18, 29, .75);
+
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(139, 92, 246, .25);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 0 30px rgba(139, 92, 246, .18),
+        0 0 60px rgba(37, 99, 235, .12);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   EFEITOS DE LUZ
+===================================================== */
+
+.imagens::before {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    top: -150px;
+    right: -150px;
+
+    background:
+        radial-gradient(circle,
+            rgba(139, 92, 246, .20),
+            transparent 70%);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.imagens::after {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    bottom: -150px;
+    left: -150px;
+
+    background:
+        radial-gradient(circle,
+            rgba(56, 189, 248, .15),
+            transparent 70%);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   TÍTULO
+===================================================== */
+
+.imagens .titulo-secao {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-bottom: 40px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.imagens .titulo-secao i {
+    font-size: 2rem;
+
+    color: var(--primary);
+
+    text-shadow:
+        0 0 15px rgba(139, 92, 246, .7);
+}
+
+.imagens .titulo-secao h2 {
+    font-size: 2.3rem;
+}
+
+
+/* =====================================================
+   GALERIA
+===================================================== */
+
+.galeria-realmify {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+/* =====================================================
+   CARD DA IMAGEM
+===================================================== */
+
+.imagem-card {
+    width: 100%;
+
+    min-height: 250px;
+
+    padding: 12px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        linear-gradient(145deg,
+            rgba(139, 92, 246, .12),
+            rgba(37, 99, 235, .08));
+
+    border: 1px solid rgba(139, 92, 246, .20);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    transition: .4s ease;
+}
+
+
+/* =====================================================
+   HOVER DO CARD
+===================================================== */
+
+.imagem-card:hover {
+    transform: translateY(-8px) scale(1.02);
+
+    border-color: var(--secondary-light);
+
+    box-shadow:
+        0 0 25px rgba(139, 92, 246, .25),
+        0 0 45px rgba(56, 189, 248, .12);
+}
+
+
+/* =====================================================
+   IMAGEM
+===================================================== */
+
+.imagem-card img {
+    width: 100%;
+
+    height: 100%;
+
+    max-height: 400px;
+
+    object-fit: contain;
+
+    display: block;
+
+    border-radius: 12px;
+
+    transition: .4s ease;
+}
+
+
+/* =====================================================
+   ZOOM DA IMAGEM
+===================================================== */
+
+.imagem-card:hover img {
+    transform: scale(1.03);
+}
+/* =====================================================
+RESPONSIVIDADE — DESKTOP
+ACIMA DE 1024px
+===================================================== */
+
+@media (min-width: 1025px) {
+
+    .info_projeto {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .projeto_realmify .apresentacao {
+        align-items: flex-start;
+    }
+
+    .imagem-realmify {
+        width: 100%;
+        min-height: 400px;
+    }
+
+    .imagem-realmify img {
+        width: 400px;
+    }
+
+    .projeto_realmify .card-tecnologia {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .destaques .informacoes ul {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .imagens {
+        width: min(1200px, 90%);
+        padding: 50px;
+        margin: 120px auto;
+    }
+
+    .galeria-realmify {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .imagem-card {
+        min-height: 220px;
+    }
+}
+
+
+/* =====================================================
+RESPONSIVIDADE — TABLET
+769px ATÉ 1024px
+===================================================== */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    /* PROJETO */
+
+    .info_projeto {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .projeto_realmify {
+        width: 90%;
+    }
+
+    .projeto_realmify .apresentacao {
+        align-items: center;
+    }
+
+
+    /* IMAGEM PRINCIPAL */
+
+    .imagem-realmify {
+        width: 100%;
+        min-height: 320px;
+    }
+
+    .imagem-realmify img {
+        width: 320px;
+    }
+
+
+    /* TECNOLOGIAS */
+
+    .projeto_realmify .card-tecnologia {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+    /* DESTAQUES */
+
+    .destaques {
+        width: 90%;
+    }
+
+    .destaques .informacoes ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* GALERIA */
+
+    .imagens {
+        width: 95%;
+        padding: 30px 20px;
+        margin: 80px auto;
+    }
+
+    .galeria-realmify {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .imagem-card {
+        min-height: 220px;
+    }
+}
+
+
+/* =====================================================
+RESPONSIVIDADE — CELULAR GRANDE
+481px ATÉ 768px
+===================================================== */
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+    /* MENU */
+
+    .menu_realmify {
+        height: auto;
+        padding: 20px;
+    }
+
+    .ico-retorno {
+        width: auto;
+        margin-right: 20px;
+    }
+
+    .menu_realmify ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px 25px;
+    }
+
+    .menu_realmify a {
+        font-size: 0.85rem;
+    }
+
+
+    /* PROJETO */
+
+    .projeto_realmify {
+        width: 95%;
+        margin-top: 120px;
+    }
+
+    .projeto_realmify h1 {
+        font-size: 2.5rem;
+    }
+
+    .projeto_realmify .descricao {
+        font-size: 1.2rem;
+    }
+
+    .projeto_realmify .text-descricao {
+        font-size: 1rem;
+    }
+
+
+    /* IMAGEM PRINCIPAL */
+
+    .info_projeto {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .projeto_realmify .apresentacao {
+        align-items: center;
+    }
+
+    .imagem-realmify {
+        width: 100%;
+        min-height: 300px;
+    }
+
+    .imagem-realmify img {
+        width: 280px;
+    }
+
+
+    /* TECNOLOGIAS */
+
+    .projeto_realmify .card-tecnologia {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* BOTÕES */
+
+    .projeto_realmify .buttons {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .projeto_realmify .btn {
+        width: 100%;
+    }
+
+
+    /* DESTAQUES */
+
+    .destaques {
+        width: 95%;
+        padding: 30px 20px;
+    }
+
+    .destaques .informacoes ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* GALERIA */
+
+    .imagens {
+        width: 95%;
+        padding: 30px 20px;
+        margin: 80px auto;
+    }
+
+    .galeria-realmify {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .imagem-card {
+        min-height: 220px;
+    }
+}
+
+
+/* =====================================================
+RESPONSIVIDADE — CELULAR PEQUENO
+ATÉ 480px
+===================================================== */
+
+@media (max-width: 480px) {
+
+    /* MENU */
+
+    .menu_realmify {
+        padding: 15px;
+    }
+
+    .menu_realmify ul {
+        gap: 12px;
+    }
+
+    .menu_realmify a {
+        font-size: 0.75rem;
+    }
+
+
+    /* PROJETO */
+
+    .projeto_realmify {
+        width: 92%;
+        margin-top: 100px;
+    }
+
+    .projeto_realmify h1 {
+        font-size: 2.2rem;
+    }
+
+    .projeto_realmify .descricao {
+        font-size: 1rem;
+    }
+
+    .projeto_realmify .text-descricao {
+        font-size: 0.9rem;
+    }
+
+
+    /* IMAGEM PRINCIPAL */
+
+    .info_projeto {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .projeto_realmify .apresentacao {
+        align-items: center;
+    }
+
+    .imagem-realmify {
+        width: 100%;
+        min-height: 240px;
+    }
+
+    .imagem-realmify img {
+        width: 220px;
+    }
+
+
+    /* TECNOLOGIAS */
+
+    .projeto_realmify .card-tecnologia {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* BOTÕES */
+
+    .projeto_realmify .buttons {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .projeto_realmify .btn {
+        width: 100%;
+    }
+
+
+    /* DESTAQUES */
+
+    .destaques {
+        width: 92%;
+        padding: 25px 15px;
+    }
+
+    .destaques .informacoes ul {
+        grid-template-columns: 1fr;
+    }
+
+    .destaques .titulo-secao h2 {
+        font-size: 1.7rem;
+    }
+
+
+    /* GALERIA */
+
+    .imagens {
+        width: 92%;
+        padding: 25px 15px;
+        margin: 60px auto;
+        border-radius: 18px;
+    }
+
+    .imagens .titulo-secao {
+        gap: 10px;
+    }
+
+    .imagens .titulo-secao i {
+        font-size: 1.5rem;
+    }
+
+    .imagens .titulo-secao h2 {
+        font-size: 1.7rem;
+    }
+
+    .galeria-realmify {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .imagem-card {
+        min-height: 180px;
+        padding: 8px;
+        border-radius: 14px;
+    }
+}
